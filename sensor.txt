@@ -1,0 +1,45 @@
+// C++ code
+
+int motor = 3;
+int boton = 4;
+int estado = HIGH;
+int sensorPin = 9;
+float tempC;
+int pinLM35 = 5;
+int value = 0;
+int lectura = 0;
+int tiempo = 10;
+int Max = 20;
+
+void setup()
+{
+    pinMode(motor, OUTPUT);
+    pinMode(boton, INPUT_PULLUP);
+    pinMode(sensorPin , INPUT);
+    Serial.begin(9600);
+}
+
+void loop()
+{
+  digitalWrite(3, 0);
+  delay(250);
+  lectura = analogRead(pinLM35); 
+  tempC = (lectura * (500.0 / 1023.0) ) - 50.0;   
+  estado = digitalRead(boton);
+  value = digitalRead(sensorPin);
+  if (estado == LOW) {     //Boton Presionado
+    // if(value == LOW)
+    if(tempC >= Max){      // temperatura limite
+      digitalWrite(3, 3000);
+      delay(tiempo*1000);
+      digitalWrite(3, 0);
+    }
+  }
+  
+  else{
+     digitalWrite(3, 0);
+  }
+
+Serial.println(estado); 
+Serial.print(tempC);
+}
