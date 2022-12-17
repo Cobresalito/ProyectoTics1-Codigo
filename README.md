@@ -18,4 +18,4 @@
 - Configurar en serial2sql-master/config.JSON, y en PHP/conexion.PHP los datos segun nuestra base de datos
 - Abrir con PytHon serial2sql.py
 - Colocar la carpeta PHP en el directorio C:\xampp\htdocs
-- Utilizar
+- Utilizar revisando la pagina http://localhost/php/
