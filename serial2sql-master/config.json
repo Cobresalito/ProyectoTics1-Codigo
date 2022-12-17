@@ -1,0 +1,15 @@
+{
+    "port":"COM1",
+    "baudrate": 9600,
+    "credentials" : {
+    "host":"localhost",
+    "database":"arduinodb",
+    "user":"Arduino1",
+    "password":"",
+    "raise_on_warnings": "True"
+    },
+    "tableName": "sensordata",
+    "fields": [
+        { "name":"temperatura","type":"INT(10)" },
+    ]
+}
