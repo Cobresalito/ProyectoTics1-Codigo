@@ -6,6 +6,7 @@
 - PHP
 - C++
 - SQL
+- Java
 
 ## Programas necesarios para la utilizacion del programa
 - Arduino IDE
